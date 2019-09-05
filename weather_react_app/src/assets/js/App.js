@@ -57,25 +57,21 @@ export default class App extends Component{
 
     render() {
         return(
-            <div className="wrapper">
-                <div className="main">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 info">
-                                <Info></Info>
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 form">
-                                <Form getWeather={this.getWeather}></Form>
-                                <Weather
-                                    temp={this.state.temp}
-                                    city={this.state.city}
-                                    country={this.state.country}
-                                    sunrise={this.state.sunrise}
-                                    sunset={this.state.sunset}
-                                    error={this.state.error}
-                                ></Weather>
-                            </div>
-                        </div>
+            <div className="container ">
+                <div className="row main">
+                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 info">
+                        <Info></Info>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 form">
+                        <Form getWeather={this.getWeather}></Form>
+                        <Weather
+                            temp={this.state.temp}
+                            city={this.state.city}
+                            country={this.state.country}
+                            sunrise={this.state.sunrise}
+                            sunset={this.state.sunset}
+                            error={this.state.error}
+                        ></Weather>
                     </div>
                 </div>
             </div>
